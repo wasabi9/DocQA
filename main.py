@@ -1,4 +1,5 @@
 import argparse
+import os
 from docqa import DocQA
 
 
@@ -9,12 +10,13 @@ def cli():
 
     args = parser.parse_args().__dict__
     filename = args.pop("filename")
+    os.environ['OPENAI_API_KEY'] = args.pop("api_key")
     docqa = DocQA(file=filename)
 
     question = ""
     while True:
-        question = input("Enter you question; enter end for ending the session: ")
-        if question.lower()=="end":
+        question = input("Enter you question; just press enter for ending the session: ")
+        if question.lower()=="":
             break
         print(docqa.answer_query(question)["choices"][0]["message"]["content"])
 
