@@ -8,8 +8,8 @@ import pypdfium2 as pdfium
 import os
 import pytesseract
 import openai
-os.environ['OPENAI_API_KEY'] = "" #   Your API Key
-openai.api_key = os.environ['OPENAI_API_KEY']
+# os.environ['OPENAI_API_KEY'] = "" #   Your API Key
+# openai.api_key = os.environ['OPENAI_API_KEY']
 class BaseEmbedding:
     def __init__(self, model: str="text-embedding-ada-002"):
         self.model = model
@@ -151,6 +151,7 @@ class DocQA:
     def __init__(self, file: str):
         self.file = file
         self.embedding_obj = BaseEmbedding()
+        openai.api_key = os.environ['OPENAI_API_KEY']
         self.post_init()
 
     def post_init(self):
