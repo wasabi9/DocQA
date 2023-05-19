@@ -17,7 +17,8 @@ def cli():
         question = input("Enter you question; just press enter for ending the session: ")
         if question.lower() == "":
             break
-        print(docqa.answer_query(question)["choices"][0]["message"]["content"])
+        else:
+            print(docqa.answer_query(question)["choices"][0]["message"]["content"])
 
 
 if __name__ == '__main__':
