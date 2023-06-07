@@ -10,7 +10,7 @@ Document Question Answering with the added powers of OCR. Also has it's own "Vec
 ## Usage
 QA with a document
 ```bash
-$ python main.py --filename [FILENAME] --api_key [OPENAi API KEY]
+$ python main.py --filename [FILENAME] --api_key [OPENAI API KEY]
 ```
 
 ## Changelog
