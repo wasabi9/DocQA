@@ -7,6 +7,12 @@ Document Question Answering with the added powers of OCR. Also has it's own "Vec
 3. OpenAI API keys with enought monies in it. Though 3.5 is honestly very cheap for personal small scale usage.
 3. Install python libraries using requirements.txt
 
+## Usage
+QA with a document
+```bash
+$ python main.py --filename [FILENAME] --api_key [OPENAi API KEY]
+```
+
 ## Changelog
 29 May - Added chat session feature
 
